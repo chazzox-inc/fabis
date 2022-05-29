@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        main: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
+        main: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
       },
       colors: { dark: "#131516" },
     },
