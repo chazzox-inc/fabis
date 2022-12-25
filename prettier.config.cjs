@@ -4,18 +4,25 @@
 module.exports = {
     useTabs: false,
     tabWidth: 4,
-    singleQuote: true,
-    trailingComma: 'none',
+    singleQuote: false,
+    trailingComma: "none",
     printWidth: 85,
     plugins: [
-        require('prettier-plugin-astro'),
-        require('prettier-plugin-tailwindcss')
+        require("prettier-plugin-svelte"),
+        require("prettier-plugin-astro"),
+        require("prettier-plugin-tailwindcss")
     ],
     overrides: [
         {
-            files: '*.astro',
+            files: "*.astro",
             options: {
-                parser: 'astro'
+                parser: "astro"
+            }
+        },
+        {
+            files: "*.svelte",
+            options: {
+                parser: "svelte"
             }
         }
     ]

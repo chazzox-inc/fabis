@@ -1,15 +1,15 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
-import zod from 'zod';
+import type { VercelRequest, VercelResponse } from "@vercel/node";
+import zod from "zod";
 
 const HTTP_METHODS = {
-    POST: 'POST',
-    GET: 'GET'
+    POST: "POST",
+    GET: "GET"
 };
 
-const post_schema = zod.object({
+export const post_schema = zod.object({
     email: zod.string().email(),
-    subject: zod.string(),
-    message: zod.string()
+    subject: zod.string().min(3),
+    message: zod.string().min(3)
 });
 
 export default async function handler(
@@ -20,7 +20,7 @@ export default async function handler(
     if (request.method !== HTTP_METHODS.POST)
         return response
             .status(504)
-            .json({ success: false, message: 'Bad Request Type!' });
+            .json({ success: false, message: "Bad Request Type!" });
 
     // validate input data
     const data = post_schema.safeParse(request.body);
@@ -29,25 +29,25 @@ export default async function handler(
     if (!data.success)
         return response
             .status(504)
-            .json({ success: false, message: 'Bad Data sent!' });
+            .json({ success: false, message: "Bad Data sent!" });
 
     //
-    if (process.env.NODE_ENV == 'development')
-        return response.status(200).json({ success: true, message: 'dev time' });
+    if (process.env.NODE_ENV == "development")
+        return response.status(200).json({ success: true, message: "dev time" });
 
     // send mailjet email
-    const req = await fetch('https://api.mailjet.com/v3.1/send', {
+    const req = await fetch("https://api.mailjet.com/v3.1/send", {
         body: JSON.stringify({
             Messages: [
                 {
                     From: {
-                        Email: 'contact-form@fabischarity.com',
-                        Name: 'Landing page contact form'
+                        Email: "contact-form@fabischarity.com",
+                        Name: "Landing page contact form"
                     },
                     To: [
                         {
-                            Email: 'admin@fabischarity.com',
-                            Name: 'FABIS CONTACT US FORM'
+                            Email: "admin@fabischarity.com",
+                            Name: "FABIS CONTACT US FORM"
                         }
                     ],
                     Subject: `User Contact Submission: ${data.data.subject}`,
@@ -59,9 +59,9 @@ export default async function handler(
             Authorization: `Basic ${btoa(
                 `${process.env.mailjet_api_id}:${process.env.mailjet_api_secret}`
             )}`,
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
         },
-        method: 'POST'
+        method: "POST"
     });
 
     console.log(req);
