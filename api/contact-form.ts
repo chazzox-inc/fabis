@@ -46,12 +46,12 @@ export default async function handler(
                     },
                     To: [
                         {
-                            Email: "admin@fabischarity.com",
+                            Email: "caylott@outlook.com",
                             Name: "FABIS CONTACT US FORM"
                         }
                     ],
                     Subject: `User Contact Submission: ${data.data.subject}`,
-                    HtmlPart: `User email ${data.data.email}\n\nUser Message: ${data.data.message}`
+                    HtmlPart: `This is an automated message:\nUser email ${data.data.email}\n\nUser Message: ${data.data.message}`
                 }
             ]
         }),
