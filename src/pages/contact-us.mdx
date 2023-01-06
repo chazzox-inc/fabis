@@ -3,5 +3,15 @@ layout: ../components/root.astro
 title: Contact Us!
 ---
 
+import ContactForm from "../components/contactForm.svelte";
 
-<h1 class='text-center text-3xl font-bold'>Contact Us</h1>
+<div class="mx-auto mb-14 max-w-5xl text-center">
+    <h1 class="text-3xl font-bold">Contact Us</h1>
+    <h4 class="text-2xl font-semibold text-black/60">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra, turpis
+        a convallis gravida, lacus lorem tincidunt ex, sit amet vulputate mi odio ut
+        mauris. Morbi
+    </h4>
+</div>
+
+<ContactForm client:load />

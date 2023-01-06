@@ -4,26 +4,26 @@ import Navbar from "./navbar.astro";
 import favicon from "../assets/favicon.ico";
 
 type Props = MarkdownLayoutProps<{
-	title: string;
-	sectionTitles: string[];
+    title: string;
+    sectionTitles: string[];
 }>;
 
 const { title } = Astro.props.frontmatter || Astro.props;
 ---
 
 <html lang="en" data-theme="garden" class="bg-primary">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="shortcut icon" href={favicon} type="image/x-icon" />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="flex min-h-screen flex-col">
-			<Navbar headings={Astro.props.headings} />
-			<div class="w-screen flex-1 bg-base-300 pt-10">
-				<slot />
-			</div>
-		</div>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href={favicon} type="image/x-icon" />
+        <title>{title}</title>
+    </head>
+    <body>
+        <div class="flex min-h-screen flex-col">
+            <Navbar headings={Astro.props.headings} />
+            <div class="flex-1 bg-base-300 pt-10">
+                <slot />
+            </div>
+        </div>
+    </body>
 </html>
