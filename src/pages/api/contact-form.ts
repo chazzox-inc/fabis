@@ -1,10 +1,6 @@
-import type { VercelRequest, VercelResponse } from "@vercel/node";
-import zod from "zod";
+import type { APIRoute } from "astro";
 
-const HTTP_METHODS = {
-    POST: "POST",
-    GET: "GET"
-};
+import zod from "zod";
 
 export const post_schema = zod.object({
     email: zod.string().email(),
@@ -12,28 +8,27 @@ export const post_schema = zod.object({
     message: zod.string().min(3)
 });
 
-export default async function handler(
-    request: VercelRequest,
-    response: VercelResponse
-) {
-    // block all non POST requests
-    if (request.method !== HTTP_METHODS.POST)
-        return response
-            .status(504)
-            .json({ success: false, message: "Bad Request Type!" });
+export const post: APIRoute = async ({ request }) => {
+    const parsed_url = Object.fromEntries(
+        new URLSearchParams(await request.text()).entries()
+    );
+    console.log(parsed_url);
 
     // validate input data
-    const data = post_schema.safeParse(request.body);
+    const data = post_schema.safeParse(parsed_url);
 
     // validation unsuccessful
     if (!data.success)
-        return response
-            .status(504)
-            .json({ success: false, message: "Bad Data sent!" });
+        return new Response(
+            JSON.stringify({ success: false, message: data.error }),
+            { status: 504 }
+        );
 
     //
     if (process.env.NODE_ENV == "development")
-        return response.status(200).json({ success: true, message: "dev time" });
+        return new Response(JSON.stringify({ success: true, message: "dev time" }), {
+            status: 200
+        });
 
     // send mailjet email
     const req = await fetch("https://api.mailjet.com/v3.1/send", {
@@ -65,6 +60,9 @@ export default async function handler(
     });
 
     console.log(req);
-
-    return;
-}
+    return {
+        body: JSON.stringify({
+            message: "This was a POST!"
+        })
+    };
+};

@@ -1,28 +1,26 @@
 <script>
     import { createForm } from "felte";
     import { validator } from "@felte/validator-zod";
-    import { post_schema } from "../../api/contact-form";
+    import { post_schema } from "../pages/api/contact-form";
 
     const { form, errors } = createForm({
-        onSubmit(values, context) {
-            fetch("/api/contact-form", {
-                method: "POST",
-                body: JSON.stringify(values)
-            })
-                .then((req) => req.json())
-                .then((res) => console.log("test"));
-        },
-        onSuccess(response, context) {
-            console.dir(response);
-        },
-        onError(err, context) {
-            console.dir(err);
-        },
         extend: validator({ schema: post_schema })
     });
+
+    async function handleSuccess(event) {
+        const { response, ...context } = event.detail;
+        console.log(await response.json());
+    }
 </script>
 
-<form use:form class="mx-auto flex max-w-3xl flex-col items-center gap-4">
+<form
+    use:form
+    class="mx-auto flex max-w-3xl flex-col items-center gap-4"
+    action="/api/contact-form"
+    method="post"
+    enctype="application/x-www-form-urlencoded"
+    on:feltesuccess={handleSuccess}
+>
     <div class="form-control w-full max-w-lg">
         <label for="email" class="label">
             <span class="label-text">Where can we contact you?</span>
