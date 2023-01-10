@@ -62,7 +62,8 @@ export const post: APIRoute = async ({ request }) => {
     console.log(req);
     return {
         body: JSON.stringify({
-            message: "This was a POST!"
+            message: "This was a POST!",
+            test: await req.json()
         })
     };
 };
