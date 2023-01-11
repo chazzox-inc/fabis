@@ -13,6 +13,8 @@ export const post: APIRoute = async ({ request }) => {
         new URLSearchParams(await request.text()).entries()
     );
 
+    console.log(parsed_url);
+
     // validate input data
     const data = post_schema.safeParse(parsed_url);
 
@@ -29,7 +31,7 @@ export const post: APIRoute = async ({ request }) => {
             Messages: [
                 {
                     From: {
-                        Email: "contact-form@fabischarity.com",
+                        Email: "contact-form@chazzox.uk",
                         Name: "Landing page contact form"
                     },
                     To: [
