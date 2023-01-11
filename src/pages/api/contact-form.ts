@@ -12,7 +12,6 @@ export const post: APIRoute = async ({ request }) => {
     const parsed_url = Object.fromEntries(
         new URLSearchParams(await request.text()).entries()
     );
-    console.log(parsed_url);
 
     // validate input data
     const data = post_schema.safeParse(parsed_url);
@@ -23,12 +22,6 @@ export const post: APIRoute = async ({ request }) => {
             JSON.stringify({ success: false, message: data.error }),
             { status: 504 }
         );
-
-    //
-    if (process.env.NODE_ENV == "development")
-        return new Response(JSON.stringify({ success: true, message: "dev time" }), {
-            status: 200
-        });
 
     // send mailjet email
     const req = await fetch("https://api.mailjet.com/v3.1/send", {
@@ -46,24 +39,27 @@ export const post: APIRoute = async ({ request }) => {
                         }
                     ],
                     Subject: `User Contact Submission: ${data.data.subject}`,
-                    HtmlPart: `This is an automated message:\nUser email ${data.data.email}\n\nUser Message: ${data.data.message}`
+                    TextPart: `This is an automated message:\nUser email ${data.data.email}\n\nUser Message: ${data.data.message}`
                 }
             ]
         }),
         headers: {
             Authorization: `Basic ${btoa(
-                `${process.env.mailjet_api_id}:${process.env.mailjet_api_secret}`
+                `${import.meta.env.SECRET_MAILJET_API_ID}:${
+                    import.meta.env.SECRET_MAILJET_API_SECRET
+                }`
             )}`,
             "Content-Type": "application/json"
         },
         method: "POST"
     });
+    const res = await req.json();
+    console.log(JSON.stringify(res));
 
-    console.log(req);
     return {
         body: JSON.stringify({
             message: "This was a POST!",
-            test: await req.json()
+            test: res
         })
     };
 };
