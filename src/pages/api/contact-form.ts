@@ -31,7 +31,7 @@ export const post: APIRoute = async ({ request }) => {
             Messages: [
                 {
                     From: {
-                        Email: "contact-form@chazzox.uk",
+                        Email: "contact-form@fabischarity.com",
                         Name: "Landing page contact form"
                     },
                     To: [
