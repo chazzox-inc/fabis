@@ -41,7 +41,9 @@ export const post: APIRoute = async ({ request }) => {
                         }
                     ],
                     Subject: `User Contact Submission: ${data.data.subject}`,
-                    TextPart: `This is an automated message:\nUser email ${data.data.email}\n\nUser Message: ${data.data.message}`
+                    TextPart:
+                        "This is an automated message:\nUser email  asdasd\n\nUser Message: asdasdasd"
+                    // TextPart: `This is an automated message:\nUser email ${data.data.email}\n\nUser Message: ${data.data.message}`
                 }
             ]
         }),
