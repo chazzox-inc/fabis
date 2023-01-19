@@ -9,11 +9,14 @@
 
     let formSubmitted = false;
     let isLoading = false;
-    let success;
+    let success = false;
 
     async function handleSuccess(event) {
         const { response, ...context } = event.detail;
-        console.log(await response.json());
+        const res = await response.json();
+        console.log(res);
+        isLoading = false;
+        success = res.success;
     }
 </script>
 
@@ -25,6 +28,10 @@
         method="post"
         enctype="application/x-www-form-urlencoded"
         on:feltesuccess={handleSuccess}
+        on:feltesubmit={() => {
+            isLoading = true;
+            formSubmitted = true;
+        }}
     >
         <div class="form-control w-full max-w-lg">
             <label for="email" class="label">
@@ -65,6 +72,15 @@
                 placeholder="Message..."
             />
         </div>
-        <button type="submit" class="btn-primary btn">Submit</button>
+        <button type="submit" class="btn-primary btn mb-10">Submit</button>
     </form>
+{:else if isLoading}
+    <div class="flex flex-col items-center gap-4">
+        <div class="spinner" />
+        <p class="text-xl">Sending...</p>
+    </div>
+{:else if !isLoading && success}
+    <div class="flex flex-col items-center gap-4">
+        <p class="text-xl">Message sent!</p>
+    </div>
 {/if}
