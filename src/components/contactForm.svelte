@@ -35,6 +35,19 @@
     >
         <div class="form-control w-full max-w-lg">
             <label for="email" class="label">
+                <span class="label-text">What should we call you?</span>
+            </label>
+            <input
+                required
+                type="text"
+                placeholder="Name..."
+                name="name"
+                id="name"
+                class="input-bordered input w-full max-w-lg"
+            />
+        </div>
+        <div class="form-control w-full max-w-lg">
+            <label for="email" class="label">
                 <span class="label-text">Where can we contact you?</span>
             </label>
             <input

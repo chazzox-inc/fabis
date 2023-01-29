@@ -1,10 +1,11 @@
 import type { APIRoute } from "astro";
-
+import type { Email } from "node-mailjet";
 import zod from "zod";
 
 export const post_schema = zod.object({
     email: zod.string().email(),
     subject: zod.string().min(3),
+    name: zod.string(),
     message: zod.string().min(3)
 });
 
@@ -25,6 +26,8 @@ export const post: APIRoute = async ({ request }) => {
             { status: 504 }
         );
 
+    const body_data = data.data;
+
     // send mailjet email
     const req = await fetch("https://api.mailjet.com/v3.1/send", {
         body: JSON.stringify({
@@ -40,8 +43,8 @@ export const post: APIRoute = async ({ request }) => {
                             Name: "FABIS CONTACT US FORM"
                         }
                     ],
-                    Subject: `User Contact Submission: ${data.data.subject}`,
-                    TextPart: `This is an automated message:\nUser email ${data.data.email}\n\nUser Message: ${data.data.message}`
+                    Subject: `User Contact Submission: ${body_data.subject}`,
+                    TextPart: `This is an automated message: \nUser name: ${body_data.email}\nUser email ${body_data.email}\n\nUser Message: ${data.data.message}`
                 }
             ]
         }),
@@ -55,13 +58,16 @@ export const post: APIRoute = async ({ request }) => {
         },
         method: "POST"
     });
-    const res = await req.json();
-    console.log(JSON.stringify(res));
+    const res = (await req.json()) as Email.PostResponseData;
+
+    const statusMessageReduced = res.Messages.map((v) => v.Status).reduce((a, b) =>
+        a == "success" && b == a ? a : b
+    );
 
     return {
         body: JSON.stringify({
-            message: "This was a POST!",
-            test: res
+            message: res.Messages[0]?.Status,
+            success: statusMessageReduced == "success"
         })
     };
 };
