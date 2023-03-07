@@ -1,0 +1,25 @@
+---
+import Layout from "../components/root.astro";
+import ContactForm from "../components/contactForm.svelte";
+---
+
+<Layout title="Contact Us!">
+    <div class="mx-auto max-w-5xl text-center">
+        <h1 class="text-3xl font-bold">Contact Us</h1>
+        <h4 class="m-2 text-2xl font-semibold text-black/60">
+            We'd love to hear from you! Please fill out the form below and we'll get
+            back to you as soon as possible. Thank you for reaching out!
+        </h4>
+    </div>
+    <div>
+        <p class="my-12 text-center">
+            Alternatively you can call us at <a href="tel:07880547482"
+                >07880 547482</a
+            > or send us an email at
+            <a class="link" href="mailto:contact-form@fabischarity.com">
+                contact-form@fabischarity.com
+            </a>
+        </p>
+    </div>
+    <ContactForm client:load />
+</Layout>

@@ -1,8 +1,8 @@
 ---
-import type { MarkdownHeading } from 'astro';
+import type { MarkdownHeading } from "astro";
 
 interface Props {
-    headings: MarkdownHeading[];
+    headings?: MarkdownHeading[];
 }
 
 const sectionTitles = Astro.props.headings;
@@ -11,8 +11,9 @@ const sectionTitles = Astro.props.headings;
 <div
     class="navbar sticky top-0 z-[99] gap-3 bg-primary text-primary-content shadow-lg"
 >
+    {(!sectionTitles || sectionTitles?.length == 0) && <div class="h-12 w-12" />}
     {
-        sectionTitles.length > 0 && (
+        sectionTitles && sectionTitles.length > 0 && (
             <div>
                 <div class="dropdown">
                     <label tabindex="0" class="btn-ghost btn-circle btn">

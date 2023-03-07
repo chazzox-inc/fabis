@@ -1,0 +1,64 @@
+---
+import Layout from "../components/root.astro";
+import logo from "../assets/FABIS_LOGO.png";
+import { getCollection } from "astro:content";
+import MostContent from "../components/mostContent.md";
+import Partners from "../components/partners.md";
+
+export const prerender = true;
+
+const test = await getCollection("dropdowns");
+---
+
+<Layout title="FABIS Charity">
+    <div class="hero mx-auto mb-16 h-5/6 max-w-4xl">
+        <div class="hero-content flex-col gap-14 md:flex-row">
+            <img
+                src={logo}
+                class="max-w-[15rem] rounded-full shadow-2xl md:max-w-xs"
+            />
+            <div>
+                <h1 class="text-5xl font-bold">
+                    Friends of Acquired Brain Injury Survivors
+                </h1>
+                <p class="py-6">
+                    FABIS is the acronym for the charity “Friends of Acquired Brain
+                    Injury Survivors” which provides free or subsidised holidays and
+                    social events. The charity is limited to those with Acquired
+                    Brain Injuries (ABI) in West Sussex.
+                </p>
+                <a href="/contact-us" class="btn-primary btn m-2 flex">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="prose-table:-z-1 prose mx-auto mb-14 max-w-[100ch] px-8 text-base-content prose-h1:scroll-mt-16 prose-h1:text-3xl prose-table:table prose-table:shadow-2xl"
+    >
+        <MostContent />
+        {
+            test.map((item) => (
+                <div>
+                    <div class="collapse-arrow rounded-box border-base-300 bg-base-200 collapse mb-10 border shadow-2xl">
+                        <input type="checkbox" />
+                        <div class="collapse-title text-xl font-medium">
+                            {item.data.title}
+                        </div>
+                        <div class="collapse-content !pb-0">
+                            <p>{item.body}</p>
+                        </div>
+                    </div>
+                </div>
+            ))
+        }
+        <p>
+            Want to get in touch? Head over to our <a href="/contact-us"
+                >contact page</a
+            > to find out how!
+        </p>
+
+        <Partners />
+    </div>
+</Layout>
