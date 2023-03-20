@@ -6,8 +6,7 @@ import MostContent from "../components/mostContent.md";
 import Partners from "../components/partners.md";
 
 export const prerender = true;
-
-const test = await getCollection("dropdowns");
+const dropdowns = await getCollection("dropdowns");
 ---
 
 <Layout title="FABIS Charity">
@@ -39,7 +38,7 @@ const test = await getCollection("dropdowns");
     >
         <MostContent />
         {
-            test.map((item) => (
+            dropdowns.map((item) => (
                 <div>
                     <div class="collapse-arrow rounded-box border-base-300 bg-base-200 collapse mb-10 border shadow-2xl">
                         <input type="checkbox" />

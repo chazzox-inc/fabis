@@ -44,6 +44,6 @@ There is an application form ready to download on this website or if this is dif
 
 # Organising a social event
 
-There is an application form [ready to download on this website](/public/application.docx) or if this is difficult to do then ABI survivors can apply via their support group coordinator or the mobile phone number for FABIS.
+There is an application form [ready to download on this website](/application.docx) or if this is difficult to do then ABI survivors can apply via their support group coordinator or the mobile phone number for FABIS.
 
 # Fund-raising events
