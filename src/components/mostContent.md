@@ -28,7 +28,7 @@ FABIS was formed to provide holidays and social events for ABI survivors to impr
 
 # How we help
 
-We, as a Charity, give a grant to allow ABI survivors to have a holiday in the principally UK and we organise social events within West Sussex. If required, carers can accompany the ABI survivor on holiday and to social events but may have to make a contribution to the cost.
+We, as a Charity, give a grant to allow ABI survivors to have a holiday principally in the UK and we organise social events within West Sussex. If required, carers can accompany the ABI survivor on holiday and to social events but may have to make a contribution to the cost.
 
 We work with specialist travel companies to provide group holidays. Please state in the application form if you would like to be kept informed of forthcoming holidays. We will also consider help with funding other holidays, but we would need to ensure that they comply with our exacting standards.
 
@@ -40,10 +40,14 @@ Starting with a grant from the Anne Merriman Trust, FABIS is entirely funded by 
 
 # How ABI survivors go about applying for a holiday
 
-There is an application form ready to download on this website or if this is difficult to do then ABI survivors can apply via their support group coordinator or the mobile phone number for FABIS.
+There is an application form ready to [download on this website](/application.docx) or if this is difficult to do then ABI survivors can apply via their support group coordinator or the mobile phone number for FABIS.
 
 # Organising a social event
 
-There is an application form [ready to download on this website](/application.docx) or if this is difficult to do then ABI survivors can apply via their support group coordinator or the mobile phone number for FABIS.
+From time to time we plan to organise social events. These include dinners, bbq's and day trips to regional attractions. Subject to financial status ABI survivors will not be charged. If you wish to be kept informed of forthcoming events please email us and we will put you on our mailing list.
+
+We are happy to consider funding existing support group ideas for social events and other meetings within West Sussex. Please email us at [contact-form@fabischarity.com](contact-form@fabischarity.com) with any ideas that you may have for group events.
 
 # Fund-raising events
+
+Although we are initially funded by a legacy we intend to raise further funds for the charity to enable it to continue its work and will be organising fund raising events each year which we will publicise.
