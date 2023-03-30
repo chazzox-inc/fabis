@@ -5,19 +5,15 @@ import zod from "zod";
 export const post_schema = zod.object({
     email: zod.string().email(),
     subject: zod.string().min(3),
-    name: zod.string(),
+    name: zod.string().min(3),
     message: zod.string().min(3)
 });
 
 export const post: APIRoute = async ({ request }) => {
-    const parsed_url = Object.fromEntries(
-        new URLSearchParams(await request.text()).entries()
-    );
-
-    console.log(parsed_url);
+    const data_unsafe = await request.json();
 
     // validate input data
-    const data = post_schema.safeParse(parsed_url);
+    const data = post_schema.safeParse(data_unsafe);
 
     // validation unsuccessful
     if (!data.success)
@@ -39,7 +35,7 @@ export const post: APIRoute = async ({ request }) => {
                     },
                     To: [
                         {
-                            Email: "caylott@outlook.com",
+                            Email: "contact-form@fabischarity.com",
                             Name: "FABIS CONTACT US FORM"
                         }
                     ],

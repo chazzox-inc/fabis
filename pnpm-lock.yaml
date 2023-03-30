@@ -7,9 +7,11 @@ specifiers:
   '@astrojs/vercel': ^3.1.4
   '@felte/validator-zod': ^1.0.12
   '@tailwindcss/typography': ^0.5.8
+  '@types/classnames': ^2.3.1
   '@types/node-mailjet': ^3.3.9
   '@vercel/node': ^2.8.2
   astro: ^2.0.18
+  classnames: ^2.3.2
   daisyui: ^2.46.0
   felte: ^1.2.6
   prettier: ^2.8.1
@@ -28,7 +30,9 @@ dependencies:
   '@astrojs/vercel': 3.1.4_astro@2.0.18
   '@felte/validator-zod': 1.0.13_zod@3.21.4
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
+  '@types/classnames': 2.3.1
   astro: 2.0.18
+  classnames: 2.3.2
   daisyui: 2.51.3
   felte: 1.2.7_svelte@3.55.1
   svelte: 3.55.1
@@ -2159,6 +2163,13 @@ packages:
       '@types/responselike': 1.0.0
     dev: true
 
+  /@types/classnames/2.3.1:
+    resolution: {integrity: sha512-zeOWb0JGBoVmlQoznvqXbE0tEC/HONsnoUNH19Hc96NFsTAwTXbTqb8FMYkru1F/iqp7a18Ws3nWJvtA1sHD1A==}
+    deprecated: This is a stub types definition. classnames provides its own type definitions, so you do not need this installed.
+    dependencies:
+      classnames: 2.3.2
+    dev: false
+
   /@types/cookie/0.4.1:
     resolution: {integrity: sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q==}
     dev: true
@@ -3178,6 +3189,10 @@ packages:
   /ci-info/3.8.0:
     resolution: {integrity: sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==}
     engines: {node: '>=8'}
+    dev: false
+
+  /classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: false
 
   /clean-stack/2.2.0:
