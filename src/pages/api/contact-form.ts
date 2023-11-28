@@ -35,7 +35,7 @@ export const post: APIRoute = async ({ request }) => {
                     },
                     To: [
                         {
-                            Email: "contact-form@fabischarity.com",
+                            Email: "admin@fabischarity.com",
                             Name: "FABIS CONTACT US FORM"
                         },
                         {
