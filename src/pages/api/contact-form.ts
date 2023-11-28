@@ -37,6 +37,10 @@ export const post: APIRoute = async ({ request }) => {
                         {
                             Email: "contact-form@fabischarity.com",
                             Name: "FABIS CONTACT US FORM"
+                        },
+                        {
+                            Email: "caylott@outlook.com",
+                            Name: "FABIS CONTACT US FORM"
                         }
                     ],
                     Subject: `User Contact Submission: ${body_data.subject}`,
