@@ -1,55 +1,62 @@
 ---
-import type { MarkdownHeading } from "astro";
-
-interface Props {
-    headings?: MarkdownHeading[];
-}
-
-const sectionTitles = Astro.props.headings;
 ---
 
 <div
     class="navbar sticky top-0 z-[99] gap-3 bg-primary text-primary-content shadow-lg"
 >
-    {(!sectionTitles || sectionTitles?.length == 0) && <div class="h-12 w-12" />}
-    {
-        sectionTitles && sectionTitles.length > 0 && (
-            <div>
-                <div class="dropdown">
-                    <label tabindex="0" class="btn-ghost btn-circle btn">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h7"
-                            />
-                        </svg>
-                    </label>
-                    <ul
-                        tabindex="0"
-                        class="dropdown-content menu rounded-box menu-compact bg-primary mt-4 w-64 p-4 shadow-2xl"
-                    >
-                        {sectionTitles.map((e) => (
-                            <li>
-                                <a href={`#${e.slug}`}>{e.text}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-        )
-    }
-    <div class="flex-1">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <label tabindex="0" class="btn-ghost btn lg:hidden">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h8m-8 6h16"></path></svg
+                >
+            </label>
+            <ul
+                tabindex="0"
+                class="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-primary p-2 shadow"
+            >
+                <li>
+                    <a href="/press/calling-all-abi">Calling all ABI survivors...</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="navbar-center flex">
         <a href="/" class="btn-ghost btn mx-auto text-xl normal-case">FABIS</a>
     </div>
-    <div>
+    <div class="navbar-end">
+        <ul class="menu menu-horizontal hidden px-1 lg:flex">
+            <li tabindex="0">
+                <a>
+                    Press
+                    <svg
+                        class="fill-current"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        ><path
+                            d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                        ></path></svg
+                    >
+                </a>
+                <ul class="bg-primary p-2">
+                    <li>
+                        <a href="/press/calling-all-abi"
+                            >Calling all ABI survivors...</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
         <a class="btn" href="/contact-us">Contact Us</a>
     </div>
 </div>
