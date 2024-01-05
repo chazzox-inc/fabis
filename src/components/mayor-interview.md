@@ -14,7 +14,7 @@ It changes their lives and those around them for evermore
 
 ## Mayor. _What does FABIS do?_
 
-**TH.** FABIS provides free holidays and social events for people with brain injuries in Chichester and the surrounding areas . These activities will improve their mental health, help them interact with others and most importantly, give them hope for the future.
+**TH.** FABIS provides free holidays and social events for people with brain injuries in Chichester and the surrounding areas. These activities will improve their mental health, help them interact with others and most importantly, give them hope for the future.
 
 ## Mayor. _Do you really mean that your holidays and social events are free?_
 
@@ -24,7 +24,7 @@ We also look very sympathetically at applicants who have an income beyond state 
 
 ## Mayor. _There will be many of our readers asking where your money comes from?_
 
-**TH.** We were fortunate to receive a large donation from the Ann Merriman Trust. She was a businesswoman who lived in West Sussex. When she passed away, she left money in a trust for "good works" in the Chichester area. The trustees of her trust were very impressed with the objectives of FABIS. They recognized that whilst loneliness is a significant factor in the lives of many people, the impact on ABI survivor is particularly damaging, to both their mental and physical hea**TH.**
+**TH.** We were fortunate to receive a large donation from the Ann Merriman Trust. She was a businesswoman who lived in West Sussex. When she passed away, she left money in a trust for "good works" in the Chichester area. The trustees of her trust were very impressed with the objectives of FABIS. They recognized that whilst loneliness is a significant factor in the lives of many people, the impact on ABI survivor is particularly damaging, to both their mental and physical health.
 
 When someone recently mentioned to a ABI survivor how lonely he had felt during lockdown , the ABI survivor responded "welcome to my world".
 
@@ -50,7 +50,7 @@ The journey my family has been on since the accident is not one I would wish on 
 
 ## Mayor. _What does the future hold for FABIS?_
 
-**TH.** 2024 will be our first year of operation since becoming a registered charity. Our inaugural event will be a dinner at the Earl of March, Lavant on Monday 4th February 2024 commencing at 7p.m. We encourage all ABI survivors and their families living in Chichester and the surrounding areas to make contact through our website –fabischarity.com. All they have to do is press the contact button and they can either telephone or e-mail.
+**TH.** 2024 will be our first year of operation since becoming a registered charity. Our inaugural event will be a dinner at the Earl of March, Lavant on Monday 26th February 2024 commencing at 7p.m. We encourage all ABI survivors and their families living in Chichester and the surrounding areas to make (contact through our website fabischarity.com)[https://fabischarity.com/contact-us]. All they have to do is press the contact button and they can either telephone or e-mail.
 
 The trustees have ideas for future events, but we want to work with our beneficiaries to establish a programme of events that they want. We want our beneficiaries to feel empowered- after all it is a charity working on their behalf.
 
