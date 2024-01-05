@@ -56,6 +56,6 @@ The trustees have ideas for future events, but we want to work with our benefici
 
 To answer your question directly, the future is very bright indeed for FABIS and for those whom we will be serving in Chichester and the surrounding areas
 
-## Mayor. \_Thank you for all that you will be doing to support an often overlooked sector of the Chichester community.
+## Mayor. _Thank you for all that you will be doing to support an often overlooked sector of the Chichester community._
 
 TH. Thank you Mr Mayor
