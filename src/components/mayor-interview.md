@@ -50,7 +50,7 @@ The journey my family has been on since the accident is not one I would wish on 
 
 ## Mayor. _What does the future hold for FABIS?_
 
-**TH.** 2024 will be our first year of operation since becoming a registered charity. Our inaugural event will be a dinner at the Earl of March, Lavant on Monday 26th February 2024 commencing at 7p.m. We encourage all ABI survivors and their families living in Chichester and the surrounding areas to make (contact through our website fabischarity.com)[https://fabischarity.com/contact-us]. All they have to do is press the contact button and they can either telephone or e-mail.
+**TH.** 2024 will be our first year of operation since becoming a registered charity. Our inaugural event will be a dinner at the Earl of March, Lavant on Monday 26th February 2024 commencing at 7p.m. We encourage all ABI survivors and their families living in Chichester and the surrounding areas to make [contact through our website fabischarity.com](https://fabischarity.com/contact-us). All they have to do is press the contact button and they can either telephone or e-mail.
 
 The trustees have ideas for future events, but we want to work with our beneficiaries to establish a programme of events that they want. We want our beneficiaries to feel empowered- after all it is a charity working on their behalf.
 
