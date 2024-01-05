@@ -1,0 +1,26 @@
+---
+import Layout from "../../components/root.astro";
+
+import CallToAction from "../../components/call-to-action.astro";
+import pressTwo from "../../assets/press-two.webp";
+import Interview from "../../components/mayor-interview.md";
+---
+
+<Layout title="Calling all ABI Survivors">
+    <div class="prose mx-auto max-w-3xl text-black">
+        <div class="text-center">
+            <h1 class="mb-0">FABIS</h1>
+            <h2 class="mt-5">The new charity for Chichester</h2>
+            <h3><i>"FABIS can make dreams come true"</i></h3>
+        </div>
+
+        <figure>
+            <img src={pressTwo} alt="Mayor of Chichester and Chairman of FABIS!" />
+            <figcaption class="text-center">
+                The Mayor of Chichester welcoming the Chairman of FABIS to Chichester
+            </figcaption>
+        </figure>
+        <Interview />
+    </div>
+    <CallToAction />
+</Layout>
