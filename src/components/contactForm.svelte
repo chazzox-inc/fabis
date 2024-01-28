@@ -28,7 +28,7 @@
 </script>
 
 {#if !formSubmitted}
-    <form use:form class="mx-auto flex max-w-3xl flex-col items-center gap-4">
+    <form use:form class="mx-auto flex max-w-3xl flex-col items-center gap-4 px-4">
         <div class="form-control w-full max-w-lg">
             <label for="email" class="label">
                 <span

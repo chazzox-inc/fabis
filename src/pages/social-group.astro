@@ -1,0 +1,25 @@
+---
+import Layout from "../components/root.astro";
+import logo from "../assets/FABIS_LOGO.png";
+import Questions from "../components/questions.md";
+import CallToAction from "../components/call-to-action.astro";
+---
+
+<Layout title="Fabis Social Group">
+    <div class="flex items-center gap-10 px-10">
+        <img class="h-48" src={logo} alt="fabis main logo" />
+        <div class="">
+            <h1 class="mb-5 text-3xl font-extrabold">
+                Friends of Acquired Brain Injury Survivors Social Group
+            </h1>
+            <p class="text-lg">
+                A Social group has been set up in the Chichester area to provide a
+                range of activities, visits and a chance to build new friendships.
+            </p>
+        </div>
+    </div>
+    <div class="prose mx-auto mt-10 mb-40">
+        <Questions />
+    </div>
+    <CallToAction />
+</Layout>
