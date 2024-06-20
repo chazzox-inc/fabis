@@ -1,6 +1,7 @@
 ---
 import Layout from "../components/root.astro";
 import logo from "../assets/FABIS_LOGO.png";
+import CoatOfArms from "../assets/coat-of-arms.webp";
 import { getCollection } from "astro:content";
 import MostContent from "../components/mostContent.md";
 import Partners from "../components/partners.md";
@@ -12,10 +13,19 @@ const dropdowns = await getCollection("dropdowns");
 <Layout title="FABIS Charity">
     <div class="hero mx-auto mb-16 h-5/6 max-w-4xl">
         <div class="hero-content flex-col gap-14 md:flex-row">
-            <img
-                src={logo}
-                class="max-w-[15rem] rounded-full shadow-2xl md:max-w-xs"
-            />
+            <div class="flex flex-col items-center">
+                <img
+                    src={logo}
+                    class="max-w-[15rem] rounded-full shadow-2xl md:max-w-xs"
+                />
+                <p
+                    class="mx-auto my-3 max-w-[100ch] whitespace-nowrap px-8 font-semibold"
+                >
+                    <img src={CoatOfArms} class="mr-4 inline h-12" />Supported by
+                    Chichester City Council
+                </p>
+            </div>
+
             <div>
                 <h1 class="text-5xl font-bold">
                     Friends of Acquired Brain Injury Survivors
@@ -43,7 +53,8 @@ const dropdowns = await getCollection("dropdowns");
         <p>
             Want to get in touch? Head over to our <a href="/contact-us"
                 >contact page</a
-            > to find out how!
+            >
+            to find out how!
         </p>
 
         <Partners />
