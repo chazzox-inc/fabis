@@ -15,14 +15,16 @@ const dropdowns = await getCollection("dropdowns");
         <div class="hero-content flex-col gap-14 md:flex-row">
             <div class="flex flex-col items-center">
                 <img
-                    src={logo}
+                    src={logo.src}
                     class="max-w-[15rem] rounded-full shadow-2xl md:max-w-xs"
                 />
                 <p
                     class="mx-auto my-3 max-w-[100ch] whitespace-nowrap px-8 font-semibold"
                 >
-                    <img src={CoatOfArms} class="mr-4 inline h-12" />Supported by
-                    Chichester City Council
+                    <img
+                        src={CoatOfArms.src}
+                        class="mr-4 inline h-12"
+                    />Supported by Chichester City Council
                 </p>
             </div>
 
@@ -31,12 +33,13 @@ const dropdowns = await getCollection("dropdowns");
                     Friends of Acquired Brain Injury Survivors
                 </h1>
                 <p class="py-6">
-                    FABIS is the acronym for the charity “Friends of Acquired Brain
-                    Injury Survivors” which provides free or subsidised holidays and
-                    social events. The charity is limited to those with Acquired
-                    Brain Injuries (ABI) in West Sussex. Our charity registration
-                    number is 1198982. Our correspondance address is 9 Maplehurst
-                    Road, Chichester, West Sussex, PO19 6QL
+                    FABIS is the acronym for the charity “Friends of Acquired
+                    Brain Injury Survivors” which provides free or subsidised
+                    holidays and social events. The charity is limited to those
+                    with Acquired Brain Injuries (ABI) in West Sussex. Our
+                    charity registration number is 1198982. Our correspondance
+                    address is 9 Maplehurst Road, Chichester, West Sussex, PO19
+                    6QL
                 </p>
                 <a href="/contact-us" class="btn-primary btn m-2 flex">
                     Contact Us
