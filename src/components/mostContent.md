@@ -19,6 +19,7 @@ The Trustee Board is made up of the following:
 |  Sandy Simpson   | Secretary and Trustee |
 | Catherine Toplis |        Trustee        |
 |   Glynis Wood    |        Trustee        |
+|  Jemma Valvona   |        Trustee        |
 
 There are no staff and none of the Trustee are paid.
 
