@@ -2,10 +2,14 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import svelte from "@astrojs/svelte";
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 
 export default defineConfig({
-    integrations: [tailwind(), mdx(), svelte()],
-    output: "hybrid",
-    adapter: vercel()
+    integrations: [svelte(), tailwind(), mdx()],
+    output: "static",
+    adapter: vercel({
+        webAnalytics: {
+            enabled: true
+        }
+    })
 });

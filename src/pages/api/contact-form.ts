@@ -9,6 +9,8 @@ export const post_schema = zod.object({
     message: zod.string().min(3)
 });
 
+export const prerender = false;
+
 export const POST: APIRoute = async ({ request }) => {
     const data_unsafe = await request.json();
 
