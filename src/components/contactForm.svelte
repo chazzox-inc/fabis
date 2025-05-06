@@ -7,6 +7,9 @@
     const { form, errors } = createForm({
         extend: validator({ schema: post_schema }),
         onSubmit: async (values) => {
+            // @ts-expect-error global value
+            posthog.capture("user_signed_up");
+
             formSubmitted = true;
             isLoading = true;
             const request = await fetch("/api/contact-form", {
@@ -45,7 +48,7 @@
                 placeholder="Name..."
                 name="name"
                 id="name"
-                class="input-bordered input w-full max-w-lg"
+                class="input input-bordered w-full max-w-lg"
             />
         </div>
         <div class="form-control w-full max-w-lg">
@@ -65,7 +68,7 @@
                 placeholder="email@example.com"
                 name="email"
                 id="email"
-                class="input-bordered input w-full max-w-lg"
+                class="input input-bordered w-full max-w-lg"
             />
         </div>
         <div class="form-control w-full max-w-lg">
@@ -85,7 +88,7 @@
                 name="subject"
                 id="subject"
                 placeholder="Type here"
-                class="input-bordered input w-full max-w-lg"
+                class="input input-bordered w-full max-w-lg"
             />
         </div>
 
@@ -108,7 +111,7 @@
                 placeholder="Message..."
             />
         </div>
-        <button type="submit" class="btn-primary btn mb-10">Submit</button>
+        <button type="submit" class="btn btn-primary mb-10">Submit</button>
     </form>
 {:else if isLoading}
     <div class="flex flex-col items-center gap-4">

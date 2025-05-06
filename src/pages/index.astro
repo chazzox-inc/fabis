@@ -5,7 +5,7 @@ import CoatOfArms from "../assets/coat-of-arms.webp";
 import { getCollection } from "astro:content";
 import MostContent from "../components/mostContent.md";
 import Partners from "../components/partners.md";
-
+import EnableHoliday from "../assets/sponsor-assets/logos/enable-holidays-transparent.png";
 export const prerender = true;
 const dropdowns = await getCollection("dropdowns");
 ---
@@ -21,10 +21,22 @@ const dropdowns = await getCollection("dropdowns");
                 <p
                     class="mx-auto my-3 max-w-[100ch] whitespace-nowrap px-8 font-semibold"
                 >
-                    <img
+                    Supported by <img
                         src={CoatOfArms.src}
-                        class="mr-4 inline h-12"
-                    />Supported by Chichester City Council
+                        class="mx-2 inline h-12"
+                    /> Chichester City Council
+                </p>
+                <p class="whitespace-nowrap px-8 font-semibold">
+                    and <a
+                        target="_blank"
+                        class="underline"
+                        href="https://www.enableholidays.com"
+                        ><img
+                            alt="Enable Holidays"
+                            src={EnableHoliday.src}
+                            class="inline h-12"
+                        /></a
+                    >
                 </p>
             </div>
 
@@ -33,15 +45,14 @@ const dropdowns = await getCollection("dropdowns");
                     Friends of Acquired Brain Injury Survivors
                 </h1>
                 <p class="py-6">
-                    FABIS is the acronym for the charity “Friends of Acquired
-                    Brain Injury Survivors” which provides free or subsidised
-                    holidays and social events. The charity is limited to those
-                    with Acquired Brain Injuries (ABI) in West Sussex. Our
-                    charity registration number is 1198982. Our correspondance
-                    address is 9 Maplehurst Road, Chichester, West Sussex, PO19
-                    6QL
+                    FABIS is the acronym for the charity “Friends of Acquired Brain
+                    Injury Survivors” which provides free or subsidised holidays and
+                    social events. The charity is limited to those with Acquired
+                    Brain Injuries (ABI) in West Sussex. Our charity registration
+                    number is 1198982. Our correspondance address is 9 Maplehurst
+                    Road, Chichester, West Sussex, PO19 6QL
                 </p>
-                <a href="/contact-us" class="btn-primary btn m-2 flex">
+                <a href="/contact-us" class="btn btn-primary m-2 flex">
                     Contact Us
                 </a>
             </div>
@@ -49,7 +60,7 @@ const dropdowns = await getCollection("dropdowns");
     </div>
 
     <div
-        class="prose-table:-z-1 prose mx-auto mb-14 max-w-[100ch] px-8 text-base-content prose-h1:scroll-mt-16 prose-h1:text-3xl prose-table:table prose-table:shadow-2xl"
+        class="prose-table:-z-1 prose mx-auto mb-14 max-w-[100ch] px-8 text-base-content prose-table:table prose-h1:scroll-mt-16 prose-h1:text-3xl prose-table:shadow-2xl"
     >
         <MostContent />
 
@@ -64,7 +75,7 @@ const dropdowns = await getCollection("dropdowns");
         {
             dropdowns.map((item) => (
                 <div>
-                    <div class="collapse-arrow rounded-box border-base-300 bg-base-200 collapse mb-10 border shadow-2xl">
+                    <div class="collapse collapse-arrow rounded-box mb-10 border border-base-300 bg-base-200 shadow-2xl">
                         <input type="checkbox" />
                         <div class="collapse-title text-xl font-medium">
                             {item.data.title}
