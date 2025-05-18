@@ -1,5 +1,9 @@
 ---
+interface Props {
+    navLogo?: string | undefined;
+}
 
+const { navLogo } = Astro.props;
 ---
 
 <div
@@ -49,6 +53,17 @@
     </div>
     <div class="navbar-center flex">
         <a href="/" class="btn btn-ghost mx-auto text-xl normal-case">FABIS</a>
+        {
+            navLogo && (
+                <a
+                    target="_blank"
+                    class="btn btn-ghost h-auto"
+                    href="https://www.enableholidays.com/"
+                >
+                    <img src={navLogo} class="h-14" alt="" />
+                </a>
+            )
+        }
     </div>
     <div class="navbar-end">
         <ul class="menu menu-horizontal hidden px-1 lg:flex">
