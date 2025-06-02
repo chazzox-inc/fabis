@@ -1,8 +1,8 @@
 ## Enable Holidays, Proud Sponsors of
 
-## The FABIS Fundraising Event: **Call My Wine**
+## The FABIS Fundraising Event: **Call My Wine Bluff**
 
-#### Bluff Every 90 seconds someone, somewhere suffers an acquired brain injury (ABI) in the UK.
+#### Every 90 seconds someone, somewhere suffers an acquired brain injury (ABI) in the UK.
 
 An ABI is a life changing experience not only for the survivor, but for loved ones
 and family as well.
