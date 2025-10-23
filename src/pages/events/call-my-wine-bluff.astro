@@ -1,6 +1,7 @@
 ---
 import Layout from "../../components/root.astro";
-import SponsorVideo from "../../assets/sponsor-assets/fabis-sponsor-video.mp4";
+// import SponsorVideo from "../../assets/sponsor-assets/fabis-sponsor-video.mp4";
+import SponsorImage from "../../assets/sponsor-assets/ENDCARD.png";
 import SponsorLogo from "../../assets/sponsor-assets/logos/enable-holidays-transparent.png";
 
 import { Content } from "../../components/event-content.md";
@@ -10,12 +11,20 @@ import CallToAction from "../../components/call-to-action.astro";
 <Layout title="Call My Wine Bluff" titleLogo={SponsorLogo.src}>
     <div>
         <div class="mx-auto my-0 max-w-6xl px-10 pb-10">
-            <div
-                class="x-auto mb-4 ml-4 h-96 w-96 [clip-path:inset(0)] [shape-outside:inset(0)] sm:float-right sm:mx-0"
-            >
-                <video autoplay id="vid">
+            <div class="x-auto mb-4 ml-4 h-96 w-96 p-10 sm:float-right sm:mx-0">
+                <img src={SponsorImage.src} alt="" />
+                <h3 class="text-center text-black">
+                    Please join us on the <b>22nd of september!</b>
+                </h3>
+                <h4 class="text-center my-1">7pm-11pm in <a
+                    class="font-bold underline"
+                        href="https://maps.app.goo.gl/rEt2urxLkgi7ZSnTA"
+                        target="_blank">Boxgrove Village Hall!</a
+                    >
+                </h4>
+                <!--<video autoplay id="vid">
                     <source src={SponsorVideo} type="video/mp4" />
-                </video>
+                 </video> -->
             </div>
             <div class="prose max-w-none">
                 <Content />
@@ -26,8 +35,8 @@ import CallToAction from "../../components/call-to-action.astro";
         <CallToAction />
     </div>
 </Layout>
-
+<!-- 
 <script>
     const videoEl = document.getElementById("vid") as unknown as any;
     if (videoEl.paused) videoEl?.play();
-</script>
+</script> -->
